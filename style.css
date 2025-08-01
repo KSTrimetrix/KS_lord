@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: url('https://cdn.wallpapersafari.com/34/32/yQ71Ae.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #00eaff;
+  animation: fadeInDown 1.5s ease;
+}
+
+.credit {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  font-size: 16px;
+  animation: fadeIn 5s ease-in;
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin: 15px auto;
+  border-left: 4px solid #00eaff;
+  border-radius: 8px;
+  width: 90%;
+  animation: fadeInUp 1s ease;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  color: #ccc;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Menu Button */
+#menuBtn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #0f0;
+  padding: 8px 12px;
+  border: 2px solid #0f0;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* Sidebar */
+#sideMenu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 180px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 998;
+}
+
+#sideMenu a {
+  display: block;
+  padding: 12px 20px;
+  color: #00eaff;
+  text-decoration: none;
+  border-bottom: 1px solid #222;
+}
+
+#sideMenu a:hover {
+  background: #111;
+}
+
+#sideMenu.active {
+  left: 0;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gaming Knowledge Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hamburger Button -->
+  <div id="menuBtn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar Menu -->
+<div id="sideMenu">
+  <a href="home.html">🏠 Home</a>
+  <a href="theories.html">🧠 Theories</a>
+  <a href="games.html">🎮 Games</a>
+  <a href="bossfight.html">⚔️ Boss Fight</a>
+</div>
+
+  <div class="overlay">
+    <h1>🎮 Gaming Knowledge Hub 🎮</h1>
+
+    <div class="credit">
+      <p><strong>By:</strong> Kunal Shakya</p>
+      <p><strong>In Association With:</strong> Avanish Pattnaik & Abhishek Gupta</p>
+      <p><strong>Minimum Amount Partner:</strong> Ujjwal</p>
+    </div>
+
+    <div class="section">
+      <h2>🎮 Gaming Setup</h2>
+      <p>Learn how to build your ultimate gaming setup with proper hardware, peripherals, and performance optimization.</p>
+    </div>
+
+    <div class="section">
+      <h2>🔥 Top Game Ideas</h2>
+      <ul>
+        <li>Post-apocalyptic survival shooter (like PUBG + Metro)</li>
+        <li>Mythical India adventure RPG with real gods</li>
+        <li>Physics-based puzzle escape game</li>
+        <li>Minecraft-style builder with auto-AI villages</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔧 Minecraft Logic & Decoding</h2>
+      <p>Explore how Minecraft works: block mechanics, redstone circuits, procedural terrain generation, and entity behavior.</p>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <button onclick="showBlasphemous()" style="font-size:18px; padding:12px 24px; background:#111; color:#0f0; border:2px solid #0f0; border-radius:8px;">
+        🎮 Play the Real Thing
+      </button>
+    </div>
+
+    <div id="blasphemousGame" style="display:none; margin-top: 40px; text-align:center;">
+      <h2 style="color:crimson;">👿 The Final Evil Awaits...</h2>
+      <div id="bossArena" style="position:relative; width:320px; height:200px; background:#000; margin:10px auto; border:2px solid crimson;">
+        <div id="player" style="width: 48px; height: 64px; background: url('https://raw.githubusercontent.com/itsKunalShakya/assets/main/warrior1.png') no-repeat center center; background-size: cover; position: absolute; bottom: 0; left: 20px; transition: left 0.2s;"></div>
+        <div id="boss" style="width:60px; height:100px; background:pink; border:2px solid red; position:absolute; bottom:0; left:220px;"></div>
+      </div>
+
+      <div style="color:#eee; font-size:16px; margin:10px;">
+        Boss Health: <span id="bossHealth">100</span>%
+      </div>
+
+      <div style="margin-top:10px;">
+        <button onclick="moveLeft()">⬅️</button>
+        <button onclick="attack()">⚔️ Attack</button>
+        <button onclick="moveRight()">➡️</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🧠 Game Physics & Logic</h2>
+      <p>Understand collision detection, gravity simulation, object movement, AI pathfinding, and damage logic in games.</p>
+    </div>
+
+    <div id="miniGame" style="margin-top: 40px;">
+      <h2>🎯 Mini Coin Click Game</h2>
+      <p>Tap the coin to collect it and increase your score!</p>
+      <div id="gameArea" style="position:relative; width:300px; height:300px; background:#111; margin:10px auto; border:2px solid #00eaff; border-radius:10px;">
+        <div id="coin" style="width:30px; height:30px; background:gold; border-radius:50%; position:absolute; top:100px; left:100px;"></div>
+        <p style="text-align:center;">Score: <span id="coinScore">0</span></p>
+      </div>
+    </div>
+
+    <footer>
+      Built with ❤️ by Kunal & Team | Inspired by PUBG & Minecraft
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
